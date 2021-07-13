@@ -1,0 +1,140 @@
+
+:root {
+--Moderate-violet: hsl(263, 55%, 52%);
+--Very-dark-grayish-blue: hsl(217, 19%, 35%);
+--Very-dark-blackish-blue: hsl(219, 29%, 14%);
+--White: hsl(0, 0%, 100%);
+--Light-gray: hsl(0, 0%, 81%);
+--Light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+
+
+
+
+/* General */
+body {
+    font-size: 13px;
+    font-family: 'Barlow Semi Condensed';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--Light-grayish-blue);
+}
+
+
+
+
+/* Layouts */
+.container {
+    width: 85%;
+    height: 80%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.daniel {
+    grid-column: span 2;
+    background-color: var(--Moderate-violet);
+}
+
+.kira {
+    grid-row: span 2;
+    background-color: var(--White);
+    box-shadow: 10px 20px 20px rgba(128, 128, 128, 0.219);
+}
+
+.patrick {
+    grid-column: span 2;
+    background-color: var(--Very-dark-blackish-blue);
+}
+
+
+
+
+
+
+/* Other porperties */
+.container-person {
+    display: flex;
+}
+
+.jonathan {
+    background-color: var(--Very-dark-grayish-blue);
+}
+
+.jeanette {
+    background-color: var(--White);
+    box-shadow: 10px 20px 20px rgba(128, 128, 128, 0.219);
+}
+
+.picture {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin-right: 20px;
+    border: 1px solid white;
+}
+
+.container-item {
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+/* Fonts */
+p {
+    margin: 0;
+    padding: 0;
+    line-height: 1.4;
+}
+
+/* Fonts colors */
+.white {
+    color: var(--White);
+}
+.gray {
+    color: var(--Light-gray);
+}
+.black {
+    color: var(--Very-dark-blackish-blue);
+}
+.gray-dark {
+    color: hsl(204, 2%, 55%);
+}
+.name, .bold {
+    font-weight: 700;
+}
+
+
+
+/* Medias */
+@media (max-width:1074px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 50px;  
+    }
+    body {
+        height: auto;
+    }
+
+}
+
+@media (max-width:687px) {
+    .container {
+        display: block;
+    }
+    .container-item {
+        margin-bottom: 20px;
+    }
+}
